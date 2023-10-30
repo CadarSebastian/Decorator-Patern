@@ -1,0 +1,4 @@
+public interface DataSource {
+    void read(String filePath);
+    void write(String filePath, String content);
+}

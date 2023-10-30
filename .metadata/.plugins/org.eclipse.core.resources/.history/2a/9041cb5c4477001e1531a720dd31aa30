@@ -1,0 +1,16 @@
+
+public class CompressionDecorator implements DataSource {
+
+	@Override
+	public String read(String filePath) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void write(String filePath, String content) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

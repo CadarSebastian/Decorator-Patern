@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        DataSource fileDataSource = new FileDataSource();
+        DataSource encryptedFileDataSource = new EncryptionDecorator(fileDataSource);
+        DataSource compressedEncryptedFileDataSource = new CompressionDecorator(encryptedFileDataSource);
+
+        String content = "This is some sensitive data.";
+
+        // Write to a file with encryption and compression
+        compressedEncryptedFileDataSource.write("encrypted_compressed_data.txt", content);
+
+        // Read from the file with encryption and compression
+        compressedEncryptedFileDataSource.read("encrypted_compressed_data.txt");
+    }
+}

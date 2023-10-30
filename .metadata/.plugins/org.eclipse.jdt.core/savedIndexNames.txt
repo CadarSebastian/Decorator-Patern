@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+E:\inginerie software\Decorator\.metadata\.plugins\org.eclipse.jdt.core
+389389742.index
+1865797976.index
+2629178376.index

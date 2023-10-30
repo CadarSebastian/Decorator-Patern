@@ -1,0 +1,32 @@
+public class CompressionDecorator implements DataSource {
+    private DataSource dataSource;
+
+    public CompressionDecorator(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    @Override
+    public String read(String filePath) {
+        String compressedContent = dataSource.read(filePath);
+        String decompressedContent = decompress(compressedContent);
+        System.out.println("Decompressed Content:");
+        System.out.println(decompressedContent);
+		return null;
+    }
+
+    @Override
+    public void write(String filePath, String content) {
+        String compressedContent = compress(content);
+        dataSource.write(filePath, compressedContent);
+    }
+
+    private String compress(String content) {
+    	//example
+        return content;
+    }
+
+    private String decompress(String content) {
+    	//example
+        return content;
+    }
+}

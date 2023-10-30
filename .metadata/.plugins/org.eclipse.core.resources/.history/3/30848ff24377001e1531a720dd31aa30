@@ -1,0 +1,16 @@
+
+public class EncryptionDecorator implements DataSource {
+
+	@Override
+	public void read(String filePath) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void write(String filePath, String content) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
